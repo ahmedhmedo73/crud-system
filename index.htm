@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="w-75 m-auto py-5">
+
+        <div class="alert alert-danger" id="alert" style="display: none;"></div>
+        <div class="form-group">
+            <label for="">productName</label>
+            <input class="form-control" type="text" id="productName">
+        </div>
+        <div class="form-group">
+            <label for="">productPrice</label>
+            <input class="form-control" type="number" id="productPrice">
+        </div>
+        <div class="form-group">
+            <label for="">productCategory</label>
+            <input class="form-control" type="text" id="productCategory">
+        </div>
+        <div class="form-group">
+            <label for="">productDesc</label>
+            <textarea class="form-control" type="text" id="productDesc"></textarea>
+        </div>
+        <button id="add" onclick="addProduct();" class="btn btn-info">add Product</button>
+        <button id="update" onclick="updateData();" class="btn btn-info" style="visibility:hidden;">update</button>
+
+
+    </div>
+
+    <div class="w-75 m-auto py-5">
+        <input placeholder="search..." type="text" class="form-control w-75 m-auto" onkeyup="search(this.value)">
+
+        <table class="table my-5">
+            <thead>
+                <th>Index</th>
+                <th>productName</th>
+                <th>productPrice</th>
+                <th>productCategory</th>
+                <th>productDesc</th>
+                <th>update</th>
+                <th>delete</th>
+            </thead>
+            <tbody id="table">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
